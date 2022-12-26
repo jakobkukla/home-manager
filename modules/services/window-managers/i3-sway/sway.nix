@@ -325,6 +325,7 @@ let
     extraOptions = cfg.extraOptions;
     withBaseWrapper = cfg.wrapperFeatures.base;
     withGtkWrapper = cfg.wrapperFeatures.gtk;
+    useSetcapWrapper = cfg.setCapSysNice;
   };
 
 in {
@@ -379,6 +380,14 @@ in {
       example = { gtk = true; };
       description = ''
         Attribute set of features to enable in the wrapper.
+      '';
+    };
+
+    setCapSysNice = mkOption {
+      type = types.bool;
+      default = true;
+      description = ''
+        Grant Sway the CAP_SYS_NICE capability to improve scheduling.
       '';
     };
 
