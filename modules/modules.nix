@@ -277,6 +277,7 @@ let
     ./services/getmail.nix
     ./services/git-sync.nix
     ./services/gnome-keyring.nix
+    ./services/goldwarden.nix
     ./services/gpg-agent.nix
     ./services/grobi.nix
     ./services/gromit-mpx.nix
